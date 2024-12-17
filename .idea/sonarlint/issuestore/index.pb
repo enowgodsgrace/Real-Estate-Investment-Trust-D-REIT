@@ -7,3 +7,5 @@ M
 tests/rent-collection.test.ts,c/8/c818c1a18636d0c2c1a004b0272179fe785ee5df
 N
 contracts/rent-collection.clar,d/b/db825c3a7a4f4c350f9ffd3476ce616a43e0efe9
+R
+"contracts/property-management.clar,f/e/fe85df7eb1e2c5d5b3563926f61d096d4922bda5

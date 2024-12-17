@@ -5,6 +5,11 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
+[contracts.property-management]
+path = 'contracts/property-management.clar'
+clarity_version = 2
+epoch = 2.5
+
 [contracts.property-nft]
 path = 'contracts/property-nft.clar'
 clarity_version = 2
