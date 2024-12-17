@@ -50,14 +50,19 @@ plan:
     - id: 0
       transactions:
         - emulated-contract-publish:
-            contract-name: property-management
-            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
-            path: contracts/property-management.clar
-            clarity-version: 2
-        - emulated-contract-publish:
             contract-name: property-nft
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             path: contracts/property-nft.clar
+            clarity-version: 2
+        - emulated-contract-publish:
+            contract-name: fractional-ownership
+            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            path: contracts/fractional-ownership.clar
+            clarity-version: 2
+        - emulated-contract-publish:
+            contract-name: property-management
+            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            path: contracts/property-management.clar
             clarity-version: 2
         - emulated-contract-publish:
             contract-name: rent-collection
