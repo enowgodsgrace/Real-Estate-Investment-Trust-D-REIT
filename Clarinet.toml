@@ -9,6 +9,11 @@ requirements = []
 path = 'contracts/property-nft.clar'
 clarity_version = 2
 epoch = 2.5
+
+[contracts.rent-collection]
+path = 'contracts/rent-collection.clar'
+clarity_version = 2
+epoch = 2.5
 [repl.analysis]
 passes = ['check_checker']
 
