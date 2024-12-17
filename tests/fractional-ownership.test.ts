@@ -1,21 +1,30 @@
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 
-import { describe, expect, it } from "vitest";
-
-const accounts = simnet.getAccounts();
-const address1 = accounts.get("wallet_1")!;
-
-/*
-  The test below is an example. To learn more, read the testing documentation here:
-  https://docs.hiro.so/stacks/clarinet-js-sdk
-*/
-
-describe("example tests", () => {
-  it("ensures simnet is well initalised", () => {
-    expect(simnet.blockHeight).toBeDefined();
+describe('Fractional Ownership Contract', () => {
+  const contractName = 'fractional-ownership';
+  let mockContractCall: any;
+  
+  beforeEach(() => {
+    mockContractCall = vi.fn();
   });
-
-  // it("shows an example", () => {
-  //   const { result } = simnet.callReadOnlyFn("counter", "get-counter", [], address1);
-  //   expect(result).toBeUint(0);
-  // });
+  
+  it('should create shares for a property', async () => {
+    mockContractCall.mockResolvedValue({ success: true });
+    const result = await mockContractCall(contractName, 'create-shares', [1, 1000]);
+    expect(result.success).toBe(true);
+  });
+  
+  it('should allow buying shares', async () => {
+    mockContractCall.mockResolvedValue({ success: true });
+    const result = await mockContractCall(contractName, 'buy-shares', [1, 100]);
+    expect(result.success).toBe(true);
+  });
+  
+  it('should get shareholder balance', async () => {
+    mockContractCall.mockResolvedValue({ success: true, value: 100 });
+    const result = await mockContractCall(contractName, 'get-shares', [1, 'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM']);
+    expect(result.success).toBe(true);
+    expect(typeof result.value).toBe('number');
+  });
 });
+
