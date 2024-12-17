@@ -9,3 +9,5 @@ N
 contracts/rent-collection.clar,d/b/db825c3a7a4f4c350f9ffd3476ce616a43e0efe9
 R
 "contracts/property-management.clar,f/e/fe85df7eb1e2c5d5b3563926f61d096d4922bda5
+Q
+!tests/property-management.test.ts,7/3/730bc7a3cd5e1755b898a6000cb4990182adb542
